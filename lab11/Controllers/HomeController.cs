@@ -28,28 +28,28 @@ namespace lab11.Controllers
             ViewData["X"] = model.X;
             ViewData["Y"] = model.Y;
             ViewData["add"] = model.add;
-			ViewData["sub"] = model.sub;
-			ViewData["mul"] = model.mul;
-			ViewData["div"] = model.div;
-			return View();
-		}
+	    ViewData["sub"] = model.sub;
+	    ViewData["mul"] = model.mul;
+	    ViewData["div"] = model.div;
+	    return View();
+	}
 
-		public IActionResult PassUsingViewBag()
-		{
-			MyModel model = myservice.setModel();
-			ViewBag.X = model.X;
-			ViewBag.Y = model.Y;
-			ViewBag.add = model.add;
-			ViewBag.sub = model.sub;
-			ViewBag.mul = model.mul;
-			ViewBag.div = model.div;
-			return View();
-		}
+	public IActionResult PassUsingViewBag()
+	{
+		MyModel model = myservice.setModel();
+		ViewBag.X = model.X;
+		ViewBag.Y = model.Y;
+		ViewBag.add = model.add;
+		ViewBag.sub = model.sub;
+		ViewBag.mul = model.mul;
+		ViewBag.div = model.div;
+		return View();
+	}
 
-		public IActionResult AccessServiceDirectly()
-		{
-			return View();
-		}
+	public IActionResult AccessServiceDirectly()
+	{
+		return View();
+	}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
